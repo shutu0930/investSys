@@ -49,7 +49,7 @@ class Sidebar extends Component {
             
               <ul className="nav-dropdown-items">
                 <li className="nav-item">
-                  <Link to={'/home/stock-items/search'} className="nav-link" activeClassName="active"><i className="icon-star"></i> Stock Categories</Link>
+                  <Link to={'/home/stock-items/search'} className="nav-link" activeClassName="active"><i className="icon-star"></i>Search Stock</Link>
                 </li>
                 <li className="nav-item">
                   <Link to={'/home/stock-items/stocks'} className="nav-link" activeClassName="active"><i className="icon-puzzle"></i> Unit of Measurement</Link>
@@ -68,7 +68,7 @@ class Sidebar extends Component {
             </li>
             <li className="nav-item">
               {/* <a className="nav-link" href="#" onClick={this.handleClick.bind(this)}><i className="icon-hourglass"></i> History</a> */}
-              <Link to={'/home/histories'} className="nav-link" activeClassName="active"><i className="icon-hourglass"></i> History</Link>
+              <Link to={'/home/transaction'} className="nav-link" activeClassName="active"><i className="icon-basket"></i> Transaction</Link>
             </li>
             {/* <li className="nav-item">
               <Link to={'/home/settings'} className="nav-link" activeClassName="active"><i className="icon-user"></i> Account</Link>

@@ -1,0 +1,102 @@
+{
+  "MSFT":
+        {
+            "symbol": "MSFT",
+            "price": "89.5900",
+            "volume": "24437",
+            "timestamp": "2018-01-12 15:59:58"
+        },
+  "FB":
+        {
+            "symbol": "FB",
+            "price": "179.4000",
+            "volume": "3758230",
+            "timestamp": "2018-01-12 15:59:59"
+        },
+  "AAPL":
+        {
+            "symbol": "AAPL",
+            "price": "176.9300",
+            "volume": "18489",
+            "timestamp": "2018-01-12 15:59:58"
+        },
+  "GOOG":
+        {
+            "symbol": "GOOG",
+            "price": "1122.0350",
+            "volume": "901019",
+            "timestamp": "2018-01-12 15:59:56"
+        },
+  "IR":
+        {
+            "symbol": "IR",
+            "price": "91.1100",
+            "volume": "18497",
+            "timestamp": "2018-01-12 15:59:47"
+        },
+
+  "IBM":
+        {
+            "symbol": "IBM",
+            "price": "163.1650",
+            "volume": "1674189",
+            "timestamp": "2018-01-12 15:59:53"
+        },
+  "MAC":
+        {
+                 "symbol": "MAC",
+                 "price": "62.9800",
+                 "volume": "18491",
+                 "timestamp": "2018-01-12 15:59:34"
+             },
+
+    "GE":
+             {
+                 "symbol": "GE",
+                 "price": "18.7600",
+                 "volume": "17489",
+                 "timestamp": "2018-01-12 15:59:56"
+             },
+    "BAC":
+             {
+                 "symbol": "BAC",
+                 "price": "31.1850",
+                 "volume": "174825",
+                 "timestamp": "2018-01-12 15:59:51"
+             },
+    "RAD":
+             {
+                 "symbol": "RAD",
+                 "price": "2.3850",
+                 "volume": "7328562",
+                 "timestamp": "2018-01-12 15:59:49"
+             },
+    "SWN":
+             {
+                 "symbol": "SWN",
+                 "price": "5.4800",
+                 "volume": "720221",
+                 "timestamp": "2018-01-12 15:59:58"
+             },
+      "TWTR":
+             {
+                 "symbol": "TWTR",
+                 "price": "25.4150",
+                 "volume": "18479",
+                 "timestamp": "2018-01-12 15:59:58"
+             },
+      "FUL":
+             {
+                 "symbol": "FUL",
+                 "price": "53.5700",
+                 "volume": "468905",
+                 "timestamp": "2018-01-12 15:59:50"
+             },
+      "HRB":
+             {
+                 "symbol": "HRB",
+                 "price": "26.3850",
+                 "volume": "61759",
+                 "timestamp": "2018-01-12 15:59:11"
+             }
+}

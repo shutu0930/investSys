@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
-import purchases from './purchases.json'
+import { Progress } from 'reactstrap';
+import stocksall from '../stocksall.json';
 
-const plist = purchases;
-class Purchases extends Component {
-  constructor () {
-    super()
+
+
+const stocksitem = stocksall;
+const API = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${query}&apikey=CN44QJ5JXJY6KEHX&datatype=json';
+
+
+
+class Transaction extends Component {
+  constructor (props) {
+    super(props)
     this.state = {
       balance: localStorage.balance
-      
+      // Interval: ''
     }
 
-    this.getColumnValue = this.getColumnValue.bind(this)
+    this.getColumnValue = this.getColumnValue.bind(this);
     
   }
-
 
   getColumnValue(price){
     if(price >= 100 && price <= 1000){
@@ -36,7 +42,6 @@ class Purchases extends Component {
 
   }
 
-
   handleClickRow(key){
     // var r = confirm("Are you sure to buy this stock?");
     // if (r==true){
@@ -50,8 +55,8 @@ class Purchases extends Component {
     if(buyNum.match(re)==null && buyNum!=null && buyNum!=""){
       alert("buy "+buyNum+ " volume");
       var bal=localStorage.balance;
-      if(bal+(buyNum*plist[key].price)<=99999999){
-        localStorage.balance+=(buyNum*plist[key].price);
+      if(bal-(buyNum*stocksitem[key].price)>=0){
+        localStorage.balance-=(buyNum*stocksitem[key].price);
       }
       this.setState({
         balance: localStorage.balance
@@ -65,11 +70,26 @@ class Purchases extends Component {
     // }
 
   }
+  componentWillMount() {    
+
+
+    // let query = 'msft';
+
+    
+
+    // fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${query}&apikey=CN44QJ5JXJY6KEHX&datatype=json`)
+    //   .then(response => response.json())
+    //   .then(data => this.setState({ symboll:data }));
+  }
+
+
 
   render() {
-    return (
-      <div className="animated fadeIn">
+      return (
+
+        <div className="animated fadeIn">
         <div className="row">
+
         <div className="card-block">
                 <form action="" method="post" className="form-horizontal ">
                   <div className="form-group row">
@@ -104,25 +124,18 @@ class Purchases extends Component {
         </div>
 
 
-
-
-
-
-
         <div className="col-12">
             <div className="card">
-              <div className="card-header">
-                Sales stock list
-              </div>
+              
               <div className="card-block">
                 <table className="table table-bordered table-hover table-outline mb-0">
                   <thead>
                     <tr>
                       <th>Symbol</th>
                       <th>Timestamp</th>
-                      <th>Price</th>
                       <th>Volume</th>
-                      <th>Selling</th>
+                      <th>Price</th>
+                      <th>Buy</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -130,16 +143,16 @@ class Purchases extends Component {
                    
                     
                       {
-                         Object.keys(plist).map((key) => {
+                         Object.keys(stocksitem).map((key) => {
                           return (
                             <tr onClick={this.handleClickRow.bind(this, key)} style={{ cursor: 'pointer' }}>
-                              <td>{plist[key].symbol}</td>
-                              <td>{plist[key].timestamp}</td>
+                              <td>{stocksitem[key].symbol}</td>
+                              <td>{stocksitem[key].timestamp}</td>
+                              <td>{stocksitem[key].volume}</td>
                               {
-                               this.getColumnValue(plist[key].price)
+                               this.getColumnValue(stocksitem[key].price)
                               }
-                              <td>{plist[key].volume}</td>
-                              <td><button type="button" className="btn btn-outline-warning"><i className="fa fa-cart-arrow-down"></i>&nbsp;Sell Now</button></td>
+                              <td><button type="button" className="btn btn-outline-success"><i className="fa fa-cart-plus"></i>&nbsp;Buy Now</button></td>
                             </tr>
                           )
                         })
@@ -147,7 +160,6 @@ class Purchases extends Component {
                         
                       }
                     
-
 
                   </tbody>
                 </table>
@@ -172,8 +184,12 @@ class Purchases extends Component {
         </div>
       </div>
 
-    )
+
+
+      )
+    
+    
   }
 }
 
-export default Purchases;
+export default Transaction;

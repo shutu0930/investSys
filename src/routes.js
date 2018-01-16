@@ -28,7 +28,7 @@ import Page500 from './views/Pages/Page500/'
 
 import Sales from './views/Sales/'
 import Purchases from './views/Purchases/'
-import Histories from './views/Histories/'
+import Transaction from './views/Transaction/'
 
 
 export default (
@@ -55,7 +55,7 @@ export default (
       
       <Route path="sales" name="Sales" component={Sales}/>
       <Route path="purchases" name="Purchases" component={Purchases}/>
-      <Route path="histories" name="Histories" component={Histories}/>
+      <Route path="transaction" name="Transaction" component={Transaction}/>
       <Route path="settings" name="Settings" component={Settings}/>
       <Route path="charts" name="Charts" component={Charts}/>
     </Route>

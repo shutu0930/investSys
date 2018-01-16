@@ -1,0 +1,11 @@
+{
+  "IR":
+    {"symbol":"IR","timestamp": "2018-01-13 15:59:58","price":91.1100,"volume":9},
+  "IBM":
+    {"symbol":"IBM","timestamp": "2018-01-12 15:59:58","price":163.1650,"volume":8},
+  "MSFT":
+    {"symbol":"MSFT","timestamp": "2018-01-10 15:59:58","price":89.5900,"volume":7},
+  "GOOG":
+    {"symbol":"GOOG","timestamp": "2017-11-12 15:59:58","price":1122.0350,"volume":6}
+
+}

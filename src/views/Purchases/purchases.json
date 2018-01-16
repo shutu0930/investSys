@@ -1,0 +1,14 @@
+{
+  "MSFT":
+    {"symbol":"MSFT","timestamp": "2018-01-12 15:59:58","price":89.5900,"volume":10},
+   "FB":
+    {"symbol":"FB","timestamp": "2018-01-12 15:59:58","price":179.400,"volume":9},
+  "AAPL":
+    {"symbol":"AAPL","timestamp": "2018-01-12 15:59:58","price":176.9300,"volume":8},
+  "GOOG":
+    {"symbol":"GOOG","timestamp": "2018-01-12 15:59:58","price":1122.0350,"volume":7},
+  "SWN":
+    {"symbol": "SWN","timestamp": "2018-01-12 15:59:58","price": 5.4800,"volume": 28}
+
+
+}
